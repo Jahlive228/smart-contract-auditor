@@ -114,7 +114,7 @@ class AuditHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
 if __name__ == "__main__":
-    server = HTTPServer(("localhost", PORT), AuditHandler)
+    server = HTTPServer(("0.0.0.0", PORT), AuditHandler)
     print(f"[*] Audit server running on http://localhost:{PORT}")
     print(f"[*] POST /audit  {{\"contract\": \"contracts/VulnerableBank.sol\"}}")
     print(f"[*] GET  /health")
